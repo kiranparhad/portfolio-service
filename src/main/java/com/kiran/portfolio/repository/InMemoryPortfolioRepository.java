@@ -10,7 +10,9 @@ import com.kiran.portfolio.domain.Portfolio;
 import com.kiran.portfolio.exception.DuplicatePortfolioException;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.context.annotation.Profile;
 
+@Profile("memory")
 @Repository
 public class InMemoryPortfolioRepository implements PortfolioRepository{
     private final Map<String, Portfolio> portfolios = new HashMap<>();

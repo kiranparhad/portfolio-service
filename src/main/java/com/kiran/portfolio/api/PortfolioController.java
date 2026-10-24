@@ -64,3 +64,17 @@ public class PortfolioController {
 
 
 }
+
+/*
+The transformations are:
+Stage	Object or operation
+HTTP request	JSON body
+Controller	CreatePortfolioRequest
+Controller	Portfolio("P-1003", "Technology Portfolio", "USD")
+Service	Receives the Portfolio record
+Adapter	Creates a PortfolioEntity with the same values
+Spring Data JPA	portfolioJpaRepository.save(entity)
+Hibernate/JDBC	Executes the appropriate SQL
+PostgreSQL	Stores the row in portfolios
+
+*/
